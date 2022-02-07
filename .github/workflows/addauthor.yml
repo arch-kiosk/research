@@ -1,0 +1,16 @@
+name: Auto Assign
+
+on:
+  issues:
+    types: [opened, edited]
+  issue_comment:
+    types: [created, edited]
+
+jobs:
+  add_labels:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions-ecosystem/action-add-assignees@v1
+        with:
+          github_token: ${{ secrets.github_token }}
+          assignees: ${{ github.actor }}
