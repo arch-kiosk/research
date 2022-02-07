@@ -9,8 +9,8 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: Naturalclar/issue-action@v1.0.0
+      - uses: Naturalclar/issue-action@v2.0.2
         with:
-          keywords: '[" "]'
-          assignees: '["urapadmin","${{ github.actor }}"]'
+          title-or-body: "both"
+          parameters: '[ {"keywords": [" "], "assignees": ["${{ github.actor }},"urapadmin"]}]'
           github-token: "${{ secrets.GITHUB_TOKEN }}"
