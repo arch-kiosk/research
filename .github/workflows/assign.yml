@@ -12,6 +12,5 @@ jobs:
       - uses: actions-ecosystem/action-add-assignees@v1
         with:
           github_token: ${{ secrets.github_token }}
-          assignees: urapadmin
-                     ${{ github.actor }}
+          assignees: "urapadmin\n${{ github.actor }}"
 
