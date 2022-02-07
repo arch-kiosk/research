@@ -9,13 +9,12 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: Naturalclar/issue-action@v1.0.0
-        with:
-          keywords: '[" "]'
-          assignees: '[]'
-          github-token: "${{ secrets.GITHUB_TOKEN }}"
       - uses: actions-ecosystem/action-add-assignees@v1
         with:
           github_token: ${{ secrets.github_token }}
-          assignees: ${{ github.actor }}\nurapadmin
+          assignees: urapadmin
+      - uses: actions-ecosystem/action-add-assignees@v1
+        with:
+          github_token: ${{ secrets.github_token }}
+          assignees: ${{ github.actor }}
 
