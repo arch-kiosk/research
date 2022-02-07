@@ -9,8 +9,8 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions-ecosystem/action-add-assignees@v1
+      - uses: Naturalclar/issue-action@v1.0.0
         with:
-          github_token: ${{ secrets.github_token }}
-          assignees: "urapadmin\n${{ github.actor }}"
-
+          keywords: '[" "]'
+          assignees: '["urapadmin",${{ github.actor }}]'
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
