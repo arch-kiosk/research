@@ -12,5 +12,5 @@ jobs:
       - uses: Naturalclar/issue-action@v1.0.0
         with:
           keywords: '[" "]'
-          assignees: '["urapadmin",${{ github.actor }}]'
+          assignees: '["urapadmin","${{ github.actor }}"]'
           github-token: "${{ secrets.GITHUB_TOKEN }}"
